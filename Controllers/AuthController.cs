@@ -18,7 +18,7 @@ namespace jwtoken.Controllers
                 new Claim(JwtRegisteredClaimNames.Email,userName)
             };
 
-            var singinKey = "BuBenimSigningKey";
+            var singinKey = "BuBenimUzunOlmasiGerekenSigningKeyDegerim";
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(singinKey));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
