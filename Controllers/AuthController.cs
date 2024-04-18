@@ -16,8 +16,7 @@ namespace jwtoken.Controllers
         public string Get(string userName, string password)
         {
             var claims = new[]{
-                new Claim(ClaimTypes.Name,userName),
-                new Claim(JwtRegisteredClaimNames.Email,userName)
+                new Claim(ClaimTypes.Name,userName)
             };
 
             var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(singinKey));

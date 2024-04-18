@@ -14,13 +14,13 @@ builder.Services.AddSwaggerGen();
 //Auth
 var issur = builder.Configuration["JwtConfig:Issuer"];
 var audience = builder.Configuration["JwtConfig:Audience"];
-var signingKey = builder.Configuration["JwtConfig:SigningKey"];
-
+var signingKey = builder.Configuration["JwtConfig:SingingKey"];
+                                        
 builder.Services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme).AddJwtBearer(options =>
 {
     options.TokenValidationParameters = new TokenValidationParameters
     {
-        ValidateIssuer = true,
+        ValidateIssuer = true, 
         ValidateAudience = true,
         ValidateLifetime = true,
         ValidateIssuerSigningKey = true,
